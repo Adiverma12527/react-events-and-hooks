@@ -1,5 +1,12 @@
+
 .App {
   text-align: center;
+  margin-top: 200px;
+  padding: 50px;
+  background-color:#61dafb;
+  margin-left: 50px;
+  margin-right: 50px;
+  border-radius: 50%;
 }
 
 .App-logo {
@@ -35,4 +42,12 @@
   to {
     transform: rotate(360deg);
   }
+}
+.inputTag{
+  background-color:aqua;
+  border:5px solid blueviolet;
+  border-radius : 5px;
+}
+.heading{
+  margin: 50px
 }

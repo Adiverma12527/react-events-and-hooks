@@ -1,6 +1,5 @@
 import './App.css';
-import { Button } from './components/button/button';
-import Card from './components/card/card';
+import { FilePicker } from './useeffect';
 
 function App() {
 
@@ -27,9 +26,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Welcome to react js  ....</h1>
-      <Button/>
-      <Card/>
+    <FilePicker/>
     </div>
   );
 }

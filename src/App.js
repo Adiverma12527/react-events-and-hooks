@@ -1,12 +1,13 @@
 import logo from './logo.svg';
 import './App.css';
+import { SecondProblem } from './usereffs';
 import { useState } from 'react';
 import { useEffect } from 'react';
-import LearnUseRef from './components/atoms/useRef';
+
 
 function App() {
-  const [count , setCount] = useState(0)
-  const [windowSize , setWindowSize] = useState('') 
+  //const [count , setCount] = useState(0)
+  //const [windowSize , setWindowSize] = useState('') 
 
   
   
@@ -20,7 +21,7 @@ function App() {
 
 
   //  useState .
-  // useRef and useEffet 
+  // useRef and useEffet .
 
   // useEffet  used to perform side effect (functionality that you need to perform along with rendering your components) in functional components .
   //  useEffetcs -/> function (where u write what to perform ) , array / optional .
@@ -54,13 +55,7 @@ function App() {
 
    return (
     <div className="App">
-      {/* <h4>{count}</h4> */}
-      {/* <button onClick={handleCLICK}>click</button> */}
-
-
-      {/* <h3>{windowSize}</h3> */}
-
-      <LearnUseRef/>
+   <SecondProblem/>
     </div>
   );
 }

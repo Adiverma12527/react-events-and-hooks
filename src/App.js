@@ -1,21 +1,35 @@
-import './App.css';
-import { useState} from 'react'
-function App() {
-  const [count,setcount]= useState(0);
-  function handleclick(){
-   const newcount=count+1;
-   setcount(newcount)
-  }
-  function handleclicks(){
-    if(count>0){
-    const newcount=count-1;
-    setcount(newcount)}
-  }
-return(<div className='App'>
-  <h1> increase value{count}</h1>
-  <button onClick={handleclick}> increase the value of count</button>
-  <button onClick={handleclicks}> decrease the value of count </button></div>
-)
-}
 
+import {useState } from 'react';
+import { NewObjcets } from './arry'
+function App() {
+let api = "https://reqres.in/api/users/"
+
+let [array,setArr] = useState([])
+async function handlegetUser(){
+  
+    // fetch(api).then((responce) => {
+    //   responce.json().then((data)=>{
+       
+    //     console.log(data)
+    //     myRef.current = data.data
+    //   })
+    // })
+
+    const response = await fetch(api).then((res)=>res);
+    const arr = await response.json();
+    setArr(arr.data)
+}
+  return (
+    <div >
+  {array.map((el,index) => {
+    return <NewObjcets
+    indexs={el}
+    key={array.id}
+    />
+  })}
+  <button onClick={handlegetUser}>get user</button>
+     
+    </div>
+  );
+}
 export default App;
